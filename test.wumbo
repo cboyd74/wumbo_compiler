@@ -1,0 +1,25 @@
+int a;
+
+int f(int b) {
+	b = b + 8;
+	return b;
+}
+
+int g(int b, bool c) {
+	if(c) {
+		b = f(b);
+	} else {
+		b = f(b+8);
+	}
+
+	return b;
+}
+
+int main() {
+	int b;
+	b = g(8, true);
+
+	cout<<b;
+	cout<<"\n";
+}
+
